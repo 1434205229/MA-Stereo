@@ -40,8 +40,7 @@ python train_kitti.py --logdir ./checkpoints/kitti/ --loadckpt ./checkpoints/sce
 ## Evaluation on Scene Flow and KITTI
 
 ### Pretrained Model
-* [CGI-Stereo](https://drive.google.com/drive/folders/15pVddbGU6ByYWRWB_CFW2pzANU0mzdU5?usp=share_link)
-* [CGF-ACV](https://drive.google.com/drive/folders/1sSZctBVYQzCpG_OPFTPIDonDRkWwca3t?usp=share_link)
+* [Google Drive](https://drive.google.com/drive/folders/1f9aIJpSsOPgMczmvFuN0f3_Ui775tvjV?usp=drive_link)
 
 Generate disparity images of KITTI test set,
 ```
