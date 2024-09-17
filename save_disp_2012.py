@@ -32,7 +32,7 @@ parser.add_argument('--dataset', default='kitti', help='dataset name', choices=_
 parser.add_argument('--datapath_12', default="/mnt/9c69d5cd-01cb-4603-b7c6-06d924734d0c/CYJ/dataset/kitti2012/", help='data path')
 parser.add_argument('--datapath_15', default="/mnt/9c69d5cd-01cb-4603-b7c6-06d924734d0c/CYJ/dataset/kitti2015/", help='data path')
 parser.add_argument('--testlist',default='./filenames/kitti12_test.txt', help='testing list')
-parser.add_argument('--loadckpt', default='./checkpoints_64/kitti_2012-4/checkpoint_000535.ckpt',help='load the weights from a specific checkpoint')
+parser.add_argument('--loadckpt', default='./checkpoints_64/kitti_2012/checkpoint_000535.ckpt',help='load the weights from a specific checkpoint')
 # parse arguments
 args = parser.parse_args()
 
@@ -52,7 +52,7 @@ state_dict = torch.load(args.loadckpt)
 model.load_state_dict(state_dict['model'])
 
 
-save_dir = './test2012-4'
+save_dir = './test2012'
 
 
 def test():
