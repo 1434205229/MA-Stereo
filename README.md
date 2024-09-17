@@ -53,5 +53,8 @@ python save_disp.py
 
 Special thanks to CGI-Stereo for providing the code base for this work.
 
-[CGI-Stereo](https://github.com/gangweiX/CGI-Stereo))
+<details>
+<summary>
+<a href="https://github.com/gangweiX/CGI-Stereo">CGI-Stereo</a> 
+</summary>
 
