@@ -34,7 +34,7 @@ parser.add_argument('--model', default='CGI_Stereo', help='select a model struct
 parser.add_argument('--maxdisp', type=int, default=192, help='maximum disparity')
 parser.add_argument('--datapath', default="/mnt/9c69d5cd-01cb-4603-b7c6-06d924734d0c/CYJ/dataset/Middlebury/", help='data path')
 parser.add_argument('--resolution', type=str, default='H')
-parser.add_argument('--loadckpt', default='./checkpoints_64/sceneflow/first/checkpoint_000038.ckpt',help='load the weights from a specific checkpoint')
+parser.add_argument('--loadckpt', default='./checkpoints_64/sceneflow/first/checkpoint_best.ckpt',help='load the weights from a specific checkpoint')
 
 # parse arguments
 args = parser.parse_args()
