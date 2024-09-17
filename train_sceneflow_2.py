@@ -43,7 +43,7 @@ parser.add_argument('--epochs', type=int, default=64, help='number of epochs to 
 parser.add_argument('--lrepochs', type=str, default="20,32,40,48,56:2", help='the epochs to decay lr: the downscale rate')
 
 parser.add_argument('--logdir', default='./checkpoints_64/sceneflow/second_2/', help='the directory to save logs and checkpoints')
-parser.add_argument('--loadckpt', default='./checkpoints_64/sceneflow/first/checkpoint_000060.ckpt', help='load the weights from a specific checkpoint')
+parser.add_argument('--loadckpt', default='./checkpoints_64/sceneflow/first/checkpoint_000063.ckpt', help='load the weights from a specific checkpoint')
 parser.add_argument('--resume', action='store_true', help='continue training the model')
 parser.add_argument('--seed', type=int, default=1, metavar='S', help='random seed (default: 1)')
 
@@ -124,7 +124,7 @@ def train():
             torch.save(checkpoint_data, "{}/checkpoint_{:0>6}.ckpt".format(args.logdir, epoch_idx))
         gc.collect()
 
-        #CGI的testing改进的很好，去除以前代码多余的部分，且新加了个办法来寻找最小D1的模型
+        
         # testing
         avg_test_scalars = AverageMeterDict()
         #bestepoch = 0
@@ -150,17 +150,16 @@ def train():
         if  nowerror < error :
             bestepoch = epoch_idx
             error = avg_test_scalars["D1"][0]
-        #scenflow不应该求EPE吗？等后续再看看最新的论文的代码是如何写的
+       
         save_scalars(logger, 'fulltest', avg_test_scalars, len(TrainImgLoader) * (epoch_idx + 1))
-        # 保存每轮epoch的平均指标，注意是×len(TrainImgLoader)（160个训练集，即长度为40），总共8000，
-        # （并不影响），因为图中实际为40个值滑动一次，相当于就是200个epoch
+        
         print("avg_test_scalars", avg_test_scalars)
 
         print('MAX epoch %d total test error = %.5f' % (bestepoch, error))
-        #每一轮epoch都输出目前最小的D1（每轮平均的）和它所在的epoch
+       
         gc.collect()
     print('MAX epoch %d total test error = %.5f' % (bestepoch, error))
-    #最后输出最小的D1和它所在的epoch
+    
 
 # train one sample
 def train_sample(sample, compute_metrics=False):
