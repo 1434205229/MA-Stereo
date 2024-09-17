@@ -32,7 +32,7 @@ parser.add_argument('--dataset', default='kitti', help='dataset name', choices=_
 parser.add_argument('--datapath_12', default="/mnt/9c69d5cd-01cb-4603-b7c6-06d924734d0c/CYJ/dataset/kitti2012/", help='data path')
 parser.add_argument('--datapath_15', default="/mnt/9c69d5cd-01cb-4603-b7c6-06d924734d0c/CYJ/dataset/kitti2015/", help='data path')
 parser.add_argument('--testlist',default='./filenames/kitti15_test.txt', help='testing list')
-parser.add_argument('--loadckpt', default='./checkpoints_64/kitti_600/checkpoint_000596.ckpt',help='load the weights from a specific checkpoint')
+parser.add_argument('--loadckpt', default='./checkpoints_64/kitti_600/checkpoint_best.ckpt',help='load the weights from a specific checkpoint')
 # parse arguments
 args = parser.parse_args()
 
