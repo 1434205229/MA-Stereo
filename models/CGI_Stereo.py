@@ -133,7 +133,7 @@ class StereoDRNetRefinement(nn.Module):
         residual_disp = self.final_conv(x)  # [B, 1, H, W]
 
         disp = F.leaky_relu(left_disp + residual_disp, inplace=True)  # [B, 1, H, W](一般为relu)
-        #EAI为relu
+        
         return disp
 
 class SubModule(nn.Module):
