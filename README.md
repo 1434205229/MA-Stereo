@@ -47,3 +47,11 @@ Generate disparity images of KITTI test set,
 ```
 python save_disp.py
 ```
+
+
+# Acknowledgement
+
+Special thanks to CGI-Stereo for providing the code base for this work.
+
+[CGI-Stereo](https://github.com/gangweiX/CGI-Stereo))
+
