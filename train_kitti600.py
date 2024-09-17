@@ -43,7 +43,7 @@ parser.add_argument('--lsp_width', type=int, default=3)
 parser.add_argument('--lsp_height', type=int, default=3)
 parser.add_argument('--lsp_dilation', type=list, default=[1, 2, 4, 8])
 
-parser.add_argument('--logdir', default='./checkpoints_64/kitti_600_5/', help='the directory to save logs and checkpoints')
+parser.add_argument('--logdir', default='./checkpoints_64/kitti_600/', help='the directory to save logs and checkpoints')
 parser.add_argument('--loadckpt', default='./checkpoints_64/sceneflow/second/checkpoint_000062.ckpt', help='load the weights from a specific checkpoint')
 parser.add_argument('--resume', action='store_true', help='continue training the model')
 parser.add_argument('--seed', type=int, default=1, metavar='S', help='random seed (default: 1)')
