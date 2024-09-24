@@ -2,7 +2,7 @@
   <h1 align="center">MA-Stereo: Real-Time Stereo Matching via Multi-scale Attention Fusion and Spatial Error-aware Refinement
 </h1>
   <p align="center">
-    Wei Gao, Yongjie Cai, Youssef Akoudad
+    Wei Gao, Yongjie Cai, Youssef Akoudad, Yang Yang, and Jie Chen
   </p>
   <div align="center"></div>
 </p>
